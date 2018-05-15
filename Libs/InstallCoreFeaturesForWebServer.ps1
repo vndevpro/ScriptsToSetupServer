@@ -30,3 +30,8 @@ Start-Service -Name WMSVC
 # Install the component requires by applications
 Write-Host "Installing web-asp-net45"
 Install-WindowsFeature -Name web-asp-net45 -IncludeManagementTools
+
+
+# Install the component requires by applications
+Write-Host "Installing Telnet-Client"
+Install-WindowsFeature Telnet-Client
