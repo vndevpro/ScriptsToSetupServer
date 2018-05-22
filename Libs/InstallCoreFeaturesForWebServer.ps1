@@ -5,9 +5,6 @@ Install-WindowsFeature -Name web-server -IncludeManagementTools
 Write-Host "Installing Web-Basic-Auth"
 Install-WindowsFeature -Name Web-Basic-Auth -IncludeManagementTools
 
-# Web Deployment Tool 2.1 requires Net 3.5
-Write-Host "Installing NET-Framework-Core"
-
 # Change the value to make it download packages from Microsoft Update
 $au = Get-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU'
 if ($au.UseWUServer -eq 1) {
@@ -15,6 +12,7 @@ if ($au.UseWUServer -eq 1) {
 	Restart-Service -Name wuauserv
 }
 
+Write-Host "Installing NET-Framework-Core"
 Install-WindowsFeature -Name NET-Framework-Core
 
 if ($au.UseWUServer -eq 1) {

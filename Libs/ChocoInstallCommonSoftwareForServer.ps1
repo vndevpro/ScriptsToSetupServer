@@ -1,5 +1,3 @@
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-
 # 7Zip - https://chocolatey.org/packages/7zip
 choco install 7zip -y
 

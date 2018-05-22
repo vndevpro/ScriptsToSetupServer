@@ -1,4 +1,4 @@
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+.\Libs\InstallChocoAndPowerShell5.ps1
 
 # Install IIS
 Write-Host "Installing web-server"
