@@ -1,8 +1,10 @@
-.\Libs\InstallChocoAndPowerShell5.ps1
-
 # Install Windows Features
 .\Libs\InstallCoreFeaturesForWebServer.ps1
 
+# Install Choco and PS5
+.\Libs\InstallChocoAndPowerShell5.ps1
+
+# Now do install common software
 .\Libs\ChocoInstallCommonSoftwareForServer.ps1
 
 # Install Web Deploy

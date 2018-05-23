@@ -1,15 +1,15 @@
-.\Libs\InstallChocoAndPowerShell5.ps1
-
 # Install IIS
 Write-Host "Installing web-server"
 Install-WindowsFeature -Name web-server -IncludeManagementTools
 
-# Install IIS Application Request Routing
-choco install iis-arr -y --version 3.0.20180207
+# Install Choco and PS5
+.\Libs\InstallChocoAndPowerShell5.ps1
 
 # Now do install common software
 .\Libs\ChocoInstallCommonSoftwareForServer.ps1
 
+# Install IIS Application Request Routing
+choco install iis-arr -y --version 3.0.20180207
 
 # Change application pool process model for Application Request Routing with Idle Time-out to 0
 #cd "$env:windir\system32\inetsrv"
