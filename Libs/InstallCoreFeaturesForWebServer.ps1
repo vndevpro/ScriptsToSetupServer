@@ -2,6 +2,9 @@
 Write-Host "Installing web-server"
 Install-WindowsFeature -Name web-server -IncludeManagementTools
 
+Write-Host "Installing Tracing feature"
+Install-WindowsFeature -Name Web-Http-Tracing
+
 Write-Host "Installing Web-Basic-Auth"
 Install-WindowsFeature -Name Web-Basic-Auth -IncludeManagementTools
 
