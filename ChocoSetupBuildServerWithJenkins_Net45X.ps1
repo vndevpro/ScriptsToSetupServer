@@ -13,6 +13,7 @@
 # MSBuild 2015 Update 3 https://chocolatey.org/packages/microsoft-build-tools/14.0.25420.1
 choco install microsoft-build-tools  -y --version 14.0.25420.1
 
-# Install Microsoft Windows SDK for Windows 8 and .NET Framework 4.5
-# https://chocolatey.org/packages/windows-sdk-8.0
-choco install windows-sdk-8.0 -y --version 8.59.29750.0
+# .NET Framework 4.5.2 Developer Pack
+# https://chocolatey.org/packages/netfx-4.5.2-devpack
+choco install netfx-4.5.1-devpack -y --version 4.5.50932
+choco install netfx-4.5.2-devpack -y --version 4.5.5165101
