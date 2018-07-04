@@ -1,6 +1,3 @@
-# Desktop-Experience -> disk cleanup
-Install-WindowsFeature -Name Desktop-Experience
-
 # 7Zip - https://chocolatey.org/packages/7zip
 choco install 7zip -y
 

@@ -1,4 +1,6 @@
 # Install Windows Features
+.\Libs\InstallCoreFeaturesAnyServer.ps1
+
 .\Libs\InstallNetFrameworks.ps1
 
 # Install Choco and PS5

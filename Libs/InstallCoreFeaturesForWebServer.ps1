@@ -8,9 +8,8 @@ Install-WindowsFeature -Name Web-Http-Tracing
 Write-Host "Installing Web-Basic-Auth"
 Install-WindowsFeature -Name Web-Basic-Auth -IncludeManagementTools
 
-# Install the component requires by applications
-Write-Host "Installing Telnet-Client"
-Install-WindowsFeature Telnet-Client
+# Common features
+(Get-Item -Path ".\").FullName + "\InstallCoreFeaturesAnyServer.ps1"
 
 # Include .Net components
 (Get-Item -Path ".\").FullName + "\InstallNetFrameworks.ps1"

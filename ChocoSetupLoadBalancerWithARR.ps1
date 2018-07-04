@@ -1,3 +1,6 @@
+# Install Windows Features
+.\Libs\InstallCoreFeaturesAnyServer.ps1
+
 # Install IIS
 Write-Host "Installing web-server"
 Install-WindowsFeature -Name web-server -IncludeManagementTools
