@@ -1,6 +1,6 @@
 # Change the value to make it download packages from Microsoft Update
-$au = Get-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU'
-if ($au.UseWUServer -eq 1) {
+$au = Get-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU' -ErrorAction SilentlyContinue
+if ($au -ne $NULL -and $au.UseWUServer -eq 1) {
 	Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU' -Name UseWUServer -Value 0
 	Restart-Service -Name wuauserv
 }
@@ -8,7 +8,7 @@ if ($au.UseWUServer -eq 1) {
 Write-Host "Installing NET-Framework-Core"
 Install-WindowsFeature -Name NET-Framework-Core
 
-if ($au.UseWUServer -eq 1) {
+if ($au -ne $NULL -and $au.UseWUServer -eq 1) {
 	Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU' -Name UseWUServer -Value 1
 	Restart-Service -Name wuauserv
 }
