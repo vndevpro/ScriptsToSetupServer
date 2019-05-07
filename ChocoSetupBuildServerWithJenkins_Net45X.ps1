@@ -19,3 +19,6 @@ choco install microsoft-build-tools  -y --version 14.0.25420.1
 # https://chocolatey.org/packages/netfx-4.5.2-devpack
 choco install netfx-4.5.1-devpack -y --version 4.5.50932
 choco install netfx-4.5.2-devpack -y --version 4.5.5165101
+
+# Install Web Deploy
+choco install webdeploy -y --version 3.6.20170627
